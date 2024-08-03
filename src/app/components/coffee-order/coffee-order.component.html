@@ -1,4 +1,4 @@
-<div class="container mt-4" [formGroup]="coffeeForm">
+<div class="coffee-selection mt-4" [formGroup]="coffeeForm">
     <h3 class="mb-3 fs-5">Select Your Coffee</h3>
 
     <!-- Coffee Selection Form -->
@@ -44,7 +44,7 @@
             <div class="row align-items-center">
                 <div class="col-auto">
                     <button type="button" (click)="incrementTopping(topping.name)"
-                        class="btn btn-outline-primary rounded btn-sm text-lg">+</button>
+                        class="btn btn-outline-primary rounded btn-sm btn-smaller">+1</button>
                 </div>
                 <div class="col text-center">
                     <span class="topping-label">{{ topping.name }} - {{ topping.price }}€ ({{
@@ -53,7 +53,7 @@
                 <div class="col-auto">
                     <button type="button" (click)="decrementTopping(topping.name)"
                         [disabled]="!(coffeeToppingCounts[topping.name] > 0)"
-                        class="btn btn-outline-danger rounded btn-sm">-</button>
+                        class="btn btn-outline-danger rounded btn-sm btn-smaller">-1</button>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
 
     <!-- Confirm Order Button -->
     <div *ngIf="!paymentVisible && isCoffeeSelectionComplete()" class="mb-4 mt-4">
-        <button type="button" (click)="confirmOrder()" class="btn btn-primary rounded btn-lg w-100">Confirm
+        <button type="button" (click)="confirmOrder()" class="btn btn-primary rounded btn-lg btn-smaller w-100">Confirm
             Order</button>
     </div>
 
@@ -74,36 +74,36 @@
 
             <!-- Coins Section -->
             <div>
-                <h5 class="mb-4 mt-4 fs-6">Coins</h5>
+                <h5 class="mb-2 fs-6">Coins</h5>
                 <div class="row d-flex align-items-center">
                     <div class="col-md-4">
                         <button type="button" (click)="updateCoinAmount(1)"
-                            class="btn btn-outline-primary me-2 rounded btn-sm text-lg">+</button>
+                            class="btn btn-outline-primary me-2 rounded btn-sm btn-smaller">+1€</button>
                     </div>
                     <div class="col-md-4 text-center">
                         <span>Coins: {{ coinAmount }}</span>
                     </div>
                     <div class="col-md-4 text-end">
                         <button type="button" (click)="updateCoinAmount(-1)"
-                            class="btn btn-outline-danger ms-2 rounded btn-sm text-lg">-</button>
+                            class="btn btn-outline-danger ms-2 rounded btn-sm btn-smaller">-1€</button>
                     </div>
                 </div>
             </div>
 
             <!-- Bills Section -->
             <div>
-                <h5 class="mb-4 mt-4 fs-6">Bills</h5>
+                <h5 class="mb-2 mt-2 fs-6">Bills</h5>
                 <div *ngFor="let bill of bills" class="row mb-3 d-flex align-items-center">
                     <div class="col-md-4">
                         <button type="button" (click)="updateBillAmount(bill)"
-                            class="btn btn-outline-primary me-2 rounded btn-sm text-lg">+</button>
+                            class="btn btn-outline-primary me-2 rounded btn-sm btn-smaller">+{{ bill }}€</button>
                     </div>
                     <div class="col-md-4 text-center">
                         <span>{{ bill }}€: {{ billAmounts[bill] || 0 }}</span>
                     </div>
                     <div class="col-md-4 text-end">
                         <button type="button" (click)="updateBillAmount(-bill)"
-                            class="btn btn-outline-danger ms-2 rounded btn-sm text-lg">-</button>
+                            class="btn btn-outline-danger ms-2 rounded btn-sm btn-smaller">-{{ bill }}€</button>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
             <p class="mt-3 fs-6">Total Inserted Amount: {{ insertedAmount }}€</p>
             <div class="text-end">
                 <button type="button" (click)="confirmPayment()"
-                    class="btn btn-success rounded btn-lg w-100 mt-2">Confirm Payment</button>
+                    class="btn btn-success rounded btn-lg btn-smaller w-100 mt-2">Confirm Payment</button>
             </div>
         </div>
     </div>
@@ -128,4 +128,25 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="order-summary" *ngIf="orderConfirmed">
+    <h2>Order Summary</h2>
+    <p>Cup Size: {{ coffeeForm.controls['selectedSize'].value }}</p>
+    <p>Coffee Type: {{ coffeeForm.controls['selectedType'].value }}</p>
+    <p>Toppings:
+        <span *ngFor="let topping of coffeeForm.controls['selectedToppings'].value">{{ topping.name }} </span>
+    </p>
+    <h3>Total: {{ totalPrice }}€</h3>
+
+    <h2>Insert Coin/Bill</h2>
+    <div>
+        <button (click)="insertMoney(1)">1€</button>
+        <button (click)="insertMoney(2)">2€</button>
+        <button (click)="insertMoney(5)">5€</button>
+        <button (click)="insertMoney(10)">10€</button>
+    </div>
+    <h3>Inserted: {{ insertedMoney }}€</h3>
+    <button (click)="completeOrder()">Complete Order</button>
+    <button (click)="cancelOrder()">Cancel Order</button>
 </div>
