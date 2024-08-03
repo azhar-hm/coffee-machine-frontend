@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-coffee-order-summary',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule],
   templateUrl: './coffee-order-summary.component.html',
   styleUrl: './coffee-order-summary.component.scss'
 })

@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CoffeeDetailsService } from '../../services/coffee-details.service';
 import { CoffeeSize, CoffeeType, CoffeeTopping } from '../../models/coffee-model';
+import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-coffee-order-selection',
