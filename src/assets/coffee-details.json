@@ -1,0 +1,19 @@
+{
+    "sizes": [
+      { "name": "Small", "price": 2 },
+      { "name": "Medium", "price": 3 },
+      { "name": "Large", "price": 3.5 }
+    ],
+    "types": [
+      { "name": "Columbian", "price": 5 },
+      { "name": "Peruvian", "price": 6.5 },
+      { "name": "Brazilian", "price": 6 }
+    ],
+    "toppings": [
+      { "name": "Chantilly", "price": 4 },
+      { "name": "Caramel syrup", "price": 2 },
+      { "name": "Chocolate chips", "price": 1 },
+      { "name": "Vanilla syrup", "price": 2 }
+    ]
+  }
+  

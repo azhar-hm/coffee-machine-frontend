@@ -1,0 +1,20 @@
+<div class="order-summary" *ngIf="orderConfirmed">
+    <h2>Order Summary</h2>
+    <p>Cup Size: {{ selectedSize.name }}</p>
+    <p>Coffee Type: {{ selectedType.name }}</p>
+    <p>Toppings:
+        <span *ngFor="let topping of selectedToppings">{{ topping.name }} </span>
+    </p>
+    <h3>Total: {{ totalPrice }}€</h3>
+
+    <h2>Insert Coin/Bill</h2>
+    <div>
+        <button (click)="insertMoney(1)">1€</button>
+        <button (click)="insertMoney(2)">2€</button>
+        <button (click)="insertMoney(5)">5€</button>
+        <button (click)="insertMoney(10)">10€</button>
+    </div>
+    <h3>Inserted: {{ insertedMoney }}€</h3>
+    <button (click)="completeOrder()">Complete Order</button>
+    <button (click)="cancelOrder()">Cancel Order</button>
+</div>

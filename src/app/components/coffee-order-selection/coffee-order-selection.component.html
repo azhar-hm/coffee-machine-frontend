@@ -1,0 +1,99 @@
+<div class="container mt-4" style="width: 100%" [formGroup]="coffeeForm">
+    <h2 class="mb-3 fs-4">Select Your Coffee</h2>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label for="size" class="form-label fs-6">Cup Size:</label>
+        </div>
+        <div class="col-md-8">
+            <select id="size" formControlName="selectedSize" class="form-select rounded">
+                <option *ngFor="let size of coffeeSizes" [ngValue]="size">{{ size.name }} - {{ size.price }}€</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label for="type" class="form-label fs-6">Coffee Type:</label>
+        </div>
+        <div class="col-md-8">
+            <select id="type" formControlName="selectedType" class="form-select rounded">
+                <option *ngFor="let type of coffeeTypes" [ngValue]="type">{{ type.name }} - {{ type.price }}€</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label for="toppings" class="form-label fs-6">Add Toppings:</label>
+        </div>
+        <div class="col-md-8">
+            <select id="toppings" formControlName="addToppings" (change)="onToppingsSelectionChange($event)"
+                class="form-select rounded">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+    </div>
+
+    <div *ngIf="isAddingToppings()" class="mb-4">
+        <h3 class="mb-3 fs-5">Select Toppings</h3>
+        <div *ngFor="let topping of coffeeToppings" class="mb-3 d-flex align-items-center">
+            <button type="button" (click)="incrementTopping(topping.name)"
+                class="btn btn-outline-primary me-2 rounded btn-sm btn-smaller">+1</button>
+            <span class="me-2">{{ topping.name }} - {{ topping.price }}€ ({{ coffeeToppingCounts[topping.name] || 0
+                }})</span>
+            <button type="button" (click)="decrementTopping(topping.name)"
+                [disabled]="!(coffeeToppingCounts[topping.name] > 0)"
+                class="btn btn-outline-danger ms-2 rounded btn-sm btn-smaller">-1</button>
+        </div>
+    </div>
+
+    <div *ngIf="!paymentVisible && isCoffeeSelectionComplete()" class="mb-4 mt-4">
+        <button type="button" (click)="confirmOrder()" class="btn btn-primary rounded btn-lg btn-smaller">Confirm
+            Order</button>
+    </div>
+
+    <div *ngIf="paymentVisible" class="mb-4 mt-4">
+        <h3 class="mb-3 fs-5">Total: {{ coffeeTotalPrice }}€</h3>
+
+        <div class="mb-4">
+            <h4 class="mb-3 fs-6">Insert Payment</h4>
+            <div class="mb-3">
+                <h5 class="mb-2 fs-6">Coins</h5>
+                <button type="button" (click)="updateCoinAmount(1)"
+                    class="btn btn-outline-primary me-2 rounded btn-sm btn-smaller">+1€</button>
+                <span>Coins: {{ coinAmount }}</span>
+                <button type="button" (click)="updateCoinAmount(-1)"
+                    class="btn btn-outline-danger ms-2 rounded btn-sm btn-smaller">-1€</button>
+            </div>
+
+            <div>
+                <h5 class="mb-2 fs-6">Bills</h5>
+                <div *ngFor="let bill of bills" class="mb-3 d-flex align-items-center">
+                    <button type="button" (click)="updateBillAmount(bill)"
+                        class="btn btn-outline-primary me-2 rounded btn-sm btn-smaller">+{{ bill }}€</button>
+                    <span class="me-2">{{ bill }}€: {{ billAmounts[bill] || 0 }}</span>
+                    <button type="button" (click)="updateBillAmount(-bill)"
+                        class="btn btn-outline-danger ms-2 rounded btn-sm btn-smaller">-{{ bill }}€</button>
+                </div>
+            </div>
+
+            <p class="mt-3 fs-6">Total Inserted Amount: {{ insertedAmount }}€</p>
+            <button type="button" (click)="confirmPayment()"
+                class="btn btn-success rounded btn-lg btn-smaller mt-2">Confirm Payment</button>
+        </div>
+    </div>
+
+    <div *ngIf="paymentConfirmed" class="mb-4 mt-4">
+        <h3 class="fs-5">Order Number: {{ orderNumber }}</h3>
+        <p class="fs-6">Change to Return: {{ changeAmount }}€</p>
+        <div *ngIf="isAddingToppings()">
+            <h3 class="mb-3 fs-5">Selected Toppings</h3>
+            <div *ngFor="let topping of coffeeToppings" class="mb-2">
+                <span class="fs-6">{{ topping.name }} - {{ topping.price }}€ ({{ coffeeToppingCounts[topping.name] || 0
+                    }})</span>
+            </div>
+        </div>
+    </div>
+</div>
