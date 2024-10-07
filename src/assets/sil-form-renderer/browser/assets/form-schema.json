@@ -1,0 +1,458 @@
+{
+  "formDefinition": {
+    "id": "1",
+    "title": "Register Organisation",
+    "sections": [
+      {
+        "id": 1,
+        "entityName": "Organisation",
+        "title": "Basic Details",
+        "fields": [
+          {
+            "type": "text",
+            "fieldName": "organisationName",
+            "label": "Organisation Name",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter organisation name"
+          },
+          {
+            "type": "text",
+            "fieldName": "acronym",
+            "label": "Acronym",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter acronym"
+          },
+          {
+            "type": "text",
+            "fieldName": "organisationType",
+            "label": "Organisation Type",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter organisation type"
+          },
+          {
+            "type": "textarea",
+            "fieldName": "mission",
+            "label": "Mission",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter mission statement",
+            "minRows": 3,
+            "maxRows": 5
+          },
+          {
+            "type": "textarea",
+            "fieldName": "objectives",
+            "label": "Objectives",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter objectives",
+            "minRows": 3,
+            "maxRows": 5
+          },
+          {
+            "type": "textarea",
+            "fieldName": "vision",
+            "label": "Vision",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter vision statement",
+            "minRows": 3,
+            "maxRows": 5
+          },
+          {
+            "type": "file",
+            "fieldName": "logo",
+            "label": "Logo",
+            "validators": [],
+            "value": null,
+            "placeholder": "Upload logo"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "entityName": "Identifier",
+        "title": "Identification",
+        "fields": [
+          {
+            "type": "text",
+            "fieldName": "identifierValue",
+            "label": "Identifier Value",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter identifier value"
+          },
+          {
+            "type": "date",
+            "fieldName": "issueDate",
+            "label": "Issue Date",
+            "validators": [],
+            "value": null,
+            "placeholder": "Select issue date"
+          },
+          {
+            "type": "date",
+            "fieldName": "expiryDate",
+            "label": "Expiry Date",
+            "validators": [],
+            "value": null,
+            "placeholder": "Select expiry date"
+          },
+          {
+            "type": "select",
+            "fieldName": "identifierType",
+            "label": "Identifier Type",
+            "validators": ["required"],
+            "options": [],
+            "value": null
+          },
+          {
+            "type": "select",
+            "fieldName": "issuedBy",
+            "label": "Issued By",
+            "validators": [],
+            "options": [],
+            "value": null
+          },
+          {
+            "type": "select",
+            "fieldName": "organisation",
+            "label": "Organisation",
+            "validators": [],
+            "options": [],
+            "value": null
+          },
+          {
+            "type": "select",
+            "fieldName": "person",
+            "label": "Person",
+            "validators": [],
+            "options": [],
+            "value": null
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "entityName": "Address",
+        "title": "Addresses",
+        "fields": [
+          {
+            "type": "text",
+            "fieldName": "address1",
+            "label": "Address Line 1",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter address line 1"
+          },
+          {
+            "type": "text",
+            "fieldName": "address2",
+            "label": "Address Line 2",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter address line 2"
+          },
+          {
+            "type": "text",
+            "fieldName": "address3",
+            "label": "Address Line 3",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter address line 3"
+          },
+          {
+            "type": "select",
+            "fieldName": "addressType",
+            "label": "Address Type",
+            "validators": ["required"],
+            "options": [],
+            "value": null
+          },
+          {
+            "type": "select",
+            "fieldName": "country",
+            "label": "Country",
+            "validators": [],
+            "options": [],
+            "value": null
+          },
+          {
+            "type": "text",
+            "fieldName": "postalCode",
+            "label": "Postal Code",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter postal code"
+          },
+          {
+            "type": "date",
+            "fieldName": "startDate",
+            "label": "Start Date",
+            "validators": [],
+            "value": null,
+            "placeholder": "Select start date"
+          },
+          {
+            "type": "date",
+            "fieldName": "endDate",
+            "label": "End Date",
+            "validators": [],
+            "value": null,
+            "placeholder": "Select end date"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "entityName": "ContactPerson",
+        "title": "Contact Persons",
+        "fields": [
+          {
+            "type": "text",
+            "fieldName": "firstName",
+            "label": "First Name",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter first name"
+          },
+          {
+            "type": "text",
+            "fieldName": "lastName",
+            "label": "Last Name",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter last name"
+          },
+          {
+            "type": "select",
+            "fieldName": "assignedPerson",
+            "label": "Assigned Person",
+            "validators": ["required"],
+            "options": [],
+            "value": null
+          },
+          {
+            "type": "select",
+            "fieldName": "address",
+            "label": "Address",
+            "validators": ["required"],
+            "options": [],
+            "value": null
+          },
+          {
+            "type": "select",
+            "fieldName": "organisation",
+            "label": "Organisation",
+            "validators": ["required"],
+            "options": [],
+            "value": null
+          },
+          {
+            "type": "select",
+            "fieldName": "role",
+            "label": "Role",
+            "validators": [],
+            "options": [],
+            "value": null
+          },
+          {
+            "type": "textarea",
+            "fieldName": "role1",
+            "label": "Role Description",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter role description",
+            "minRows": 3,
+            "maxRows": 5
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "entityName": "Contact",
+        "title": "Contacts",
+        "fields": [
+          {
+            "type": "select",
+            "fieldName": "contactType",
+            "label": "Contact Type",
+            "validators": ["required"],
+            "options": [],
+            "value": null
+          },
+          {
+            "type": "text",
+            "fieldName": "contactValue",
+            "label": "Contact Value",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter contact value"
+          },
+          {
+            "type": "checkbox",
+            "fieldName": "isPrimary",
+            "label": "Is Primary",
+            "validators": [],
+            "value": false
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "entityName": "Person",
+        "title": "Persons",
+        "fields": [
+          {
+            "type": "text",
+            "fieldName": "firstName",
+            "label": "First Name",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter first name"
+          },
+          {
+            "type": "text",
+            "fieldName": "lastName",
+            "label": "Last Name",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter last name"
+          },
+          {
+            "type": "text",
+            "fieldName": "middleName",
+            "label": "Middle Name",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter middle name"
+          },
+          {
+            "type": "text",
+            "fieldName": "nickname",
+            "label": "Nickname",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter nickname"
+          },
+          {
+            "type": "text",
+            "fieldName": "gender",
+            "label": "Gender",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter gender"
+          },
+          {
+            "type": "date",
+            "fieldName": "dateOfBirth",
+            "label": "Date of Birth",
+            "validators": [],
+            "value": null,
+            "placeholder": "Select date of birth"
+          },
+          {
+            "type": "file",
+            "fieldName": "photo",
+            "label": "Photo",
+            "validators": [],
+            "value": null,
+            "placeholder": "Upload photo"
+          },
+          {
+            "type": "textarea",
+            "fieldName": "biodata",
+            "label": "Biodata",
+            "validators": [],
+            "value": "",
+            "placeholder": "Enter biodata",
+            "minRows": 3,
+            "maxRows": 5
+          },
+          {
+            "type": "checkbox",
+            "fieldName": "agreeTerms",
+            "label": "I agree to the terms and conditions",
+            "validators": ["required"],
+            "value": false
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "entityName": "TestSection",
+        "title": "Test Section",
+        "fields": [
+          {
+            "type": "email",
+            "fieldName": "testEmail",
+            "label": "Test Email",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter a valid email address"
+          },
+          {
+            "type": "password",
+            "fieldName": "testPassword",
+            "label": "Test Password",
+            "validators": ["required"],
+            "value": "",
+            "placeholder": "Enter a password"
+          },
+          {
+            "type": "number",
+            "fieldName": "testNumber",
+            "label": "Test Number",
+            "validators": ["required"],
+            "value": null,
+            "placeholder": "Enter a number"
+          },
+          {
+            "type": "radio",
+            "fieldName": "testRadio",
+            "label": "Test Radio",
+            "validators": ["required"],
+            "options": [
+              { "label": "Option 1", "value": "option1" },
+              { "label": "Option 2", "value": "option2" }
+            ],
+            "value": null
+          },
+          {
+            "type": "file",
+            "fieldName": "testFile",
+            "label": "Test File",
+            "validators": ["required"],
+            "value": null,
+            "placeholder": "Upload a file"
+          },
+          {
+            "type": "slider",
+            "fieldName": "testSlider",
+            "label": "Test Slider",
+            "validators": ["required"],
+            "value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1
+          },
+          {
+            "type": "select",
+            "fieldName": "testSelect",
+            "label": "Test Select",
+            "validators": ["required"],
+            "options": [
+              { "label": "Option 1", "value": "option1" },
+              { "label": "Option 2", "value": "option2" }
+            ],
+            "value": null,
+            "placeholder": "Select an option"
+          }
+        ]
+      }
+    ]
+  }
+}

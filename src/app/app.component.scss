@@ -1,12 +1,24 @@
-.layout {
-  max-width: 450px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-@media (max-width: 450px) {
-  .layout {
-    padding: 10px;
-  }
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 70vw; /* Full viewport width */
+}
+
+.card {
+  flex: 1;
+  /* Optional: Add padding/margin to the card */
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,4 +1,29 @@
 <div class="layout">
+  <div class="bg-dark text-white">
+    <div class="container py-5">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card p-4" (click)="toggleCoffeeMachine()">
+                    <h2 class="card-title">Go to coffee machine application</h2>
+                    <p class="card-text">Explore our coffee machine frontend component.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card p-4" (click)="toggleRenderer()">
+                    <h2 class="card-title">Go to web component sil-form-renderer</h2>
+                    <p class="card-text">Discover our web component for form rendering.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<div class="renderer-layout" *ngIf="showRenderer">
+  <sil-form-renderer #formRenderer></sil-form-renderer>
+</div>
+
+<div class="renderer-layout" *ngIf="showCoffeeMachine">
   <app-coffee-order-selection></app-coffee-order-selection>
-  <!-- <app-coffee-order-summary></app-coffee-order-summary> -->
 </div>
