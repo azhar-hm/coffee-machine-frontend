@@ -1,0 +1,1615 @@
+{
+  "formDefinition": {
+    "id": "1",
+    "title": "Application for Registration for NGO/NPO",
+    "apiEndpoint": "api/form/save",
+    "ocdCaseTypeId": "REGISTRATION",
+    "ocdCaseSubTypeId": "REGISTRATION_OF_NGO",
+    "ocdWorkflowId": "WORKFLOW_4984513156789455123",
+    "ocdAssignerId": "usr_5224442c22335w651",
+    "ocdAssignedDate": "2024-10-07T00:00:00",
+    "ocdAssigneeId": "usr_5224442c223354651",
+    "ocdStatusId": "STATUS_4984513156789455123",
+    "ocdActionId": "ACTION_4984513156789455123",
+    "ocdIsEditable": false,
+    "groups": [
+      {
+        "id": 1,
+        "title": "Mock Group",
+        "entities": [
+          {
+            "fieldName": "mockEntity",
+            "entityName": "MockEntity",
+            "title": "Mock Entity",
+            "dependencies": [],
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "firstName",
+                "display": {
+                  "label": "First Name",
+                  "placeholder": "Enter first name"
+                },
+                "validation": {
+                  "required": true,
+                  "minLength": 2,
+                  "maxLength": 50,
+                  "whitespace": true,
+                  "errorMessages": {
+                    "required": "First name is required.",
+                    "minlength": "First name must be at least 2 characters.",
+                    "maxlength": "First name cannot exceed 50 characters.",
+                    "whitespace": "First name cannot be only whitespace."
+                  }
+                },
+                "data": {
+                  "defaultValue": "David"
+                }
+              },
+              {
+                "type": "email",
+                "fieldName": "mockEmail",
+                "display": {
+                  "label": "Mock Email",
+                  "placeholder": "Enter a valid email address"
+                },
+                "validation": {
+                  "required": true,
+                  "email": true,
+                  "errorMessages": {
+                    "required": "Mock Email is required.",
+                    "email": "Please enter a valid email address."
+                  }
+                },
+                "data": {
+                  "defaultValue": "david.adediji@sil.mu"
+                }
+              },
+              {
+                "type": "password",
+                "fieldName": "mockPassword",
+                "display": {
+                  "label": "Mock Password",
+                  "placeholder": "Enter a password"
+                },
+                "validation": {
+                  "required": true,
+                  "minLength": 6,
+                  "maxLength": 20,
+                  "errorMessages": {
+                    "required": "Mock Password is required.",
+                    "minlength": "Password must be at least 6 characters.",
+                    "maxlength": "Password cannot exceed 20 characters."
+                  }
+                },
+                "behavior": { "autocomplete": "on" },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "number",
+                "fieldName": "mockNumber",
+                "display": {
+                  "label": "Mock Number",
+                  "placeholder": "Enter a number"
+                },
+                "validation": {
+                  "required": true,
+                  "min": 1,
+                  "max": 100,
+                  "errorMessages": {
+                    "required": "Mock Number is required.",
+                    "min": "Number must be at least 1.",
+                    "max": "Number cannot exceed 100."
+                  }
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "radio",
+                "fieldName": "mockRadio",
+                "display": {
+                  "label": "Mock Radio"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Mock Radio is required."
+                  }
+                },
+                "data": {
+                  "value": null,
+                  "options": [
+                    { "label": "Option 1", "value": "option1" },
+                    { "label": "Option 2", "value": "option2" }
+                  ]
+                }
+              },
+              {
+                "type": "file",
+                "fieldName": "mockFile",
+                "display": {
+                  "label": "Mock File",
+                  "placeholder": "Upload a file"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Mock File is required."
+                  }
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "slider",
+                "fieldName": "mockSlider",
+                "display": {
+                  "label": "Mock Slider",
+                  "min": 0,
+                  "max": 100,
+                  "step": 1
+                },
+                "validation": {
+                  "required": true,
+                  "min": 0,
+                  "max": 99,
+                  "errorMessages": {
+                    "required": "Mock Slider is required.",
+                    "min": "Slider value must be at least 0.",
+                    "max": "Slider value cannot exceed 100."
+                  }
+                },
+                "data": {
+                  "value": 50
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "mockDate",
+                "display": {
+                  "label": "Mock Date",
+                  "placeholder": "Select mock date"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Mock Date is required."
+                  }
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "mockSelect",
+                "display": {
+                  "label": "Mock Select",
+                  "placeholder": "Select an option"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Mock Select is required."
+                  }
+                },
+                "data": {
+                  "api": "api/mockSelections",
+                  "value": null
+                }
+              },
+              {
+                "type": "textarea",
+                "fieldName": "biodata",
+                "display": {
+                  "label": "Biodata",
+                  "placeholder": "Enter biodata",
+                  "minRows": 3,
+                  "maxRows": 8
+                },
+                "behavior": {
+                  "disabled": true
+                },
+                "validation": {
+                  "required": true,
+                  "maxLength": 500,
+                  "errorMessages": {
+                    "required": "Biodata is required",
+                    "maxlength": "Biodata cannot exceed 500 characters."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              }
+            ]
+          },
+          {
+            "fieldName": "secondMockEntities",
+            "entityName": "SecondMockEntity",
+            "title": "Second Mock Entity",
+            "isCollection": true,
+            "parentEntity": "MockEntity",
+            "collectionProperties": {
+              "collectionTitle": "Second Mock Entity",
+              "viewType": "grid-1",
+              "itemLayout": {
+                "cardType": "data-card",
+                "title": "address1",
+                "subTitle": "address2",
+                "subTitle2": "address3",
+                "description": "descriptionField",
+                "image": null,
+                "footer": "postalCode",
+                "actions": ["editButton", "deleteButton"]
+              },
+              "sortOptions": ["name", "dateAdded"],
+
+              "emptyStateMessage": "No items found.",
+              "api": "api/secondMockEntities"
+            },
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "address1",
+                "display": {
+                  "label": "Address Line 1",
+                  "placeholder": "Enter address line 1"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Address Line 1 is required"
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "address2",
+                "display": {
+                  "label": "Address Line 2",
+                  "placeholder": "Enter address line 2"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "address3",
+                "display": {
+                  "label": "Address Line 3",
+                  "placeholder": "Enter address line 3"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "addressType",
+                "display": {
+                  "label": "Address Type"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Address Type is required"
+                  }
+                },
+                "data": {
+                  "api": "api/addressTypes",
+                  "value": null
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "country",
+                "display": {
+                  "label": "Country"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "api": "api/Countries",
+                  "value": null
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "postalCode",
+                "display": {
+                  "label": "Postal Code",
+                  "placeholder": "Enter postal code"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "startDate",
+                "display": {
+                  "label": "Start Date",
+                  "placeholder": "Select start date"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "endDate",
+                "display": {
+                  "label": "End Date",
+                  "placeholder": "Select end date"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              }
+            ]
+          },
+          {
+            "fieldName": "thirdMockEntity",
+            "entityName": "ThirdMockEntity",
+            "title": "Third Mock Entity",
+            "parentEntity": "MockEntity",
+            "fields": [
+              {
+                "type": "email",
+                "fieldName": "childEmail",
+                "display": {
+                  "label": "Child Email",
+                  "placeholder": "Enter a valid email address"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Child Email is required"
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "childFirstName",
+                "display": {
+                  "label": "First Name",
+                  "placeholder": "Enter first name"
+                },
+
+                "behavior": {
+                  "disabled": true,
+                  "visible": true,
+                  "autocomplete": "on"
+                },
+                "validation": {
+                  "required": true,
+                  "maxLength": 10,
+                  "errorMessages": {
+                    "required": "First Name is required",
+                    "maxlength": "Child First Name exceeds maximum length"
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "childLastName",
+                "display": {
+                  "label": "Last Name",
+                  "placeholder": "Enter last name"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Last Name is required"
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "childDateOfBirth",
+                "display": {
+                  "label": "Date of Birth",
+                  "placeholder": "Select date of birth"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              }
+            ]
+          },
+          {
+            "fieldName": "fourthMockEntity",
+            "entityName": "FourthMockEntity",
+            "title": "Fourth Mock Entity",
+            "parentEntity": "ThirdMockEntity",
+            "fields": [
+              {
+                "type": "email",
+                "fieldName": "childEmail",
+                "display": {
+                  "label": "Child Email",
+                  "placeholder": "Enter a valid email address"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Child Email is required"
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "childFirstName",
+                "display": {
+                  "label": "First Name",
+                  "placeholder": "Enter first name"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "First Name is required"
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "childLastName",
+                "display": {
+                  "label": "Last Name",
+                  "placeholder": "Enter last name"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Last Name is required"
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "childDateOfBirth",
+                "display": {
+                  "label": "Date of Birth",
+                  "placeholder": "Select date of birth"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "childGender",
+                "display": {
+                  "label": "Gender"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "options": [
+                    { "label": "Male", "value": "male" },
+                    { "label": "Female", "value": "female" },
+                    { "label": "Other", "value": "other" }
+                  ],
+                  "value": null
+                }
+              },
+              {
+                "type": "textarea",
+                "fieldName": "childBiodata",
+                "display": {
+                  "label": "Biodata",
+                  "placeholder": "Enter biodata",
+                  "minRows": 3,
+                  "maxRows": 5
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "file",
+                "fieldName": "childPhoto",
+                "display": {
+                  "label": "Photo",
+                  "placeholder": "Upload photo"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "checkbox",
+                "fieldName": "childAgreeTerms",
+                "display": {
+                  "label": "I agree to the terms and conditions"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "You must agree to the terms and conditions"
+                  }
+                },
+                "data": {
+                  "value": false
+                }
+              }
+            ]
+          },
+          {
+            "fieldName": "fifthMockEntity",
+            "entityName": "FifthMockEntity",
+            "title": "Fifth Mock Entity",
+            "isFinalEntity": true,
+            "parentEntity": "FourthMockEntity",
+            "fields": [
+              {
+                "type": "email",
+                "fieldName": "childEmail",
+                "display": {
+                  "label": "Child Email",
+                  "placeholder": "Enter a valid email address"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Child Email is required"
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "childFirstName",
+                "display": {
+                  "label": "First Name",
+                  "placeholder": "Enter first name"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "First Name is required"
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "childLastName",
+                "display": {
+                  "label": "Last Name",
+                  "placeholder": "Enter last name"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Last Name is required"
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "childDateOfBirth",
+                "display": {
+                  "label": "Date of Birth",
+                  "placeholder": "Select date of birth"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "childGender",
+                "display": {
+                  "label": "Gender"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "options": [
+                    { "label": "Male", "value": "male" },
+                    { "label": "Female", "value": "female" },
+                    { "label": "Other", "value": "other" }
+                  ],
+                  "value": null
+                }
+              },
+              {
+                "type": "textarea",
+                "fieldName": "childBiodata",
+                "display": {
+                  "label": "Biodata",
+                  "placeholder": "Enter biodata",
+                  "minRows": 3,
+                  "maxRows": 5
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "file",
+                "fieldName": "childPhoto",
+                "display": {
+                  "label": "Photo",
+                  "placeholder": "Upload photo"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "checkbox",
+                "fieldName": "childAgreeTerms",
+                "display": {
+                  "label": "I agree to the terms and conditions"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "You must agree to the terms and conditions"
+                  }
+                },
+                "data": {
+                  "value": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Register Organisation",
+        "entities": [
+          {
+            "fieldName": "organisation",
+            "entityName": "Organisation",
+            "title": "Basic Details",
+            "dependencies": [],
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "organisationName",
+                "display": {
+                  "label": "Organisation Name",
+                  "placeholder": "Enter organisation name",
+                  "visible": true
+                },
+                "behavior": {
+                  "disabled": false
+                },
+                "validation": {
+                  "required": true,
+                  "minLength": 2,
+                  "maxLength": 100,
+                  "whitespace": true,
+                  "errorMessages": {
+                    "required": "Organisation name is required.",
+                    "minlength": "Organisation name must be at least 2 characters.",
+                    "maxlength": "Organisation name cannot exceed 100 characters.",
+                    "whitespace": "Organisation name cannot be only whitespace."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "acronym",
+                "display": {
+                  "label": "Acronym",
+                  "placeholder": "Enter acronym",
+                  "visible": true
+                },
+                "validation": {
+                  "required": true,
+                  "minLength": 2,
+                  "maxLength": 20,
+                  "whitespace": true,
+                  "errorMessages": {
+                    "required": "Acronym is required.",
+                    "minlength": "Acronym must be at least 2 characters.",
+                    "maxlength": "Acronym cannot exceed 20 characters.",
+                    "whitespace": "Acronym cannot be only whitespace."
+                  }
+                },
+                "behavior": {
+                  "disabled": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "organisationType",
+                "display": {
+                  "label": "Organisation Type",
+                  "placeholder": "Enter organisation type",
+                  "visible": true
+                },
+                "validation": {
+                  "required": false
+                },
+
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "textarea",
+                "fieldName": "mission",
+                "display": {
+                  "label": "Mission",
+                  "placeholder": "Enter mission statement",
+                  "minRows": 3,
+                  "maxRows": 5
+                },
+                "validation": {
+                  "required": false,
+                  "maxLength": 500
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "textarea",
+                "fieldName": "objectives",
+                "display": {
+                  "label": "Objectives",
+                  "placeholder": "Enter objectives",
+                  "minRows": 3,
+                  "maxRows": 5
+                },
+                "validation": {
+                  "required": false,
+                  "maxLength": 500
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "textarea",
+                "fieldName": "vision",
+                "display": {
+                  "label": "Vision",
+                  "placeholder": "Enter vision statement",
+                  "minRows": 3,
+                  "maxRows": 5
+                },
+                "validation": {
+                  "required": false,
+                  "maxLength": 500
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "file",
+                "fieldName": "logo",
+                "display": {
+                  "label": "Logo",
+                  "placeholder": "Upload logo"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              }
+            ]
+          },
+          {
+            "fieldName": "identifiers",
+            "entityName": "Identifier",
+            "title": "Identification",
+            "isCollection": true,
+            "parentEntity": "Organisation",
+            "collectionProperties": {
+              "collectionTitle": "Identifiers",
+              "viewType": "grid-1",
+              "itemLayout": {
+                "cardType": "data-card",
+                "title": "identifierValue",
+                "subTitle": "identifierType",
+                "subTitle2": "issuedBy",
+                "description": "identifierType",
+                "image": null,
+                "footer": "expiryDate",
+                "actions": ["editButton", "deleteButton"]
+              },
+              "sortOptions": ["name", "dateAdded"],
+
+              "emptyStateMessage": "No identifiers found.",
+              "api": "api/identifiers"
+            },
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "identifierValue",
+                "display": {
+                  "label": "Identifier Value",
+                  "placeholder": "Enter identifier value"
+                },
+                "validation": {
+                  "required": true,
+                  "minLength": 2,
+                  "maxLength": 50,
+                  "whitespace": true,
+                  "errorMessages": {
+                    "required": "Identifier value is required.",
+                    "minlength": "Identifier value must be at least 2 characters.",
+                    "maxlength": "Identifier value cannot exceed 50 characters.",
+                    "whitespace": "Identifier value cannot be only whitespace."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "issueDate",
+                "display": {
+                  "label": "Issue Date",
+                  "placeholder": "Select issue date"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "expiryDate",
+                "display": {
+                  "label": "Expiry Date",
+                  "placeholder": "Select expiry date"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "identifierType",
+                "display": {
+                  "label": "Identifier Type"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Identifier type is required."
+                  }
+                },
+                "data": {
+                  "api": "api/identifierTypes",
+                  "value": null
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "issuedBy",
+                "display": {
+                  "label": "Issued By"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "api": "api/organisationOptions",
+                  "value": null
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "organisation",
+                "display": {
+                  "label": "Organisation"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "api": "api/organisationOptions",
+                  "value": null
+                }
+              }
+            ]
+          },
+          {
+            "fieldName": "addresses",
+            "entityName": "Address",
+            "title": "Addresses",
+            "isCollection": true,
+            "parentEntity": "Organisation",
+            "collectionProperties": {
+              "collectionTitle": "Addresses",
+              "viewType": "grid-1",
+              "itemLayout": {
+                "cardType": "data-card",
+                "title": "address1",
+                "subTitle": "address2",
+                "subTitle2": "address3",
+                "description": "descriptionField",
+                "image": null,
+                "footer": "postalCode",
+                "actions": ["editButton", "deleteButton"]
+              },
+              "sortOptions": ["name", "dateAdded"],
+
+              "emptyStateMessage": "No items found.",
+              "api": "api/addresses"
+            },
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "address1",
+                "display": {
+                  "label": "Address Line 1",
+                  "placeholder": "Enter address line 1"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Address line 1 is required."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "address2",
+                "display": {
+                  "label": "Address Line 2",
+                  "placeholder": "Enter address line 2"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "address3",
+                "display": {
+                  "label": "Address Line 3",
+                  "placeholder": "Enter address line 3"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "addressType",
+                "display": {
+                  "label": "Address Type"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Address type is required."
+                  }
+                },
+
+                "data": { "api": "api/addressTypes", "value": null }
+              },
+              {
+                "type": "select",
+                "fieldName": "country",
+                "display": {
+                  "label": "Country"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "api": "api/Countries",
+                  "value": null
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "postalCode",
+                "display": {
+                  "label": "Postal Code",
+                  "placeholder": "Enter postal code"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "startDate",
+                "display": {
+                  "label": "Start Date",
+                  "placeholder": "Select start date"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "endDate",
+                "display": {
+                  "label": "End Date",
+                  "placeholder": "Select end date"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              }
+            ]
+          },
+          {
+            "fieldName": "contact",
+            "entityName": "Contact",
+            "parentEntity": "Organisation",
+            "title": "Contact Details",
+            "fields": [
+              {
+                "type": "select",
+                "fieldName": "contactType",
+                "display": {
+                  "label": "Contact Type"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Contact type is required."
+                  }
+                },
+                "data": {
+                  "api": "api/contactTypes",
+                  "value": null
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "contactValue",
+                "display": {
+                  "label": "Contact Value",
+                  "placeholder": "Enter contact value"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Contact value is required."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "checkbox",
+                "fieldName": "isPrimary",
+                "display": {
+                  "label": "Is Primary"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Persons within Organisation",
+        "entities": [
+          {
+            "fieldName": "person",
+            "entityName": "Person",
+            "title": "Persons",
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "firstName",
+                "display": {
+                  "label": "First Name",
+                  "placeholder": "Enter first name"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "First name is required."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "lastName",
+                "display": {
+                  "label": "Last Name",
+                  "placeholder": "Enter last name"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Last name is required."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "middleName",
+                "display": {
+                  "label": "Middle Name",
+                  "placeholder": "Enter middle name"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "nickname",
+                "display": {
+                  "label": "Nickname",
+                  "placeholder": "Enter nickname"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "gender",
+                "display": {
+                  "label": "Gender",
+                  "placeholder": "Enter gender"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "dateOfBirth",
+                "display": {
+                  "label": "Date of Birth",
+                  "placeholder": "Select date of birth"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "file",
+                "fieldName": "photo",
+                "display": {
+                  "label": "Photo",
+                  "placeholder": "Upload photo"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "textarea",
+                "fieldName": "biodata",
+                "display": {
+                  "label": "Biodata",
+                  "placeholder": "Enter biodata",
+                  "minRows": 3,
+                  "maxRows": 5
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "checkbox",
+                "fieldName": "agreeTerms",
+                "display": {
+                  "label": "I agree to the terms and conditions"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "You must agree to the terms."
+                  }
+                },
+                "data": {
+                  "value": false
+                }
+              }
+            ]
+          },
+          {
+            "entityName": "ContactPerson",
+            "fieldName": "contactPerson",
+            "title": "Contact Persons",
+            "isFinalEntity": true,
+            "isCollection": true,
+            "parentEntity": "Organisation",
+            "collectionProperties": {
+              "collectionTitle": "Contact Persons",
+              "viewType": "grid-2",
+              "itemLayout": {
+                "cardType": "avatar-card",
+                "title": "firstName",
+                "subTitle": "role",
+                "image": null
+              },
+              "sortOptions": ["name", "dateAdded"],
+
+              "emptyStateMessage": "No items found.",
+              "api": "api/contactPersons"
+            },
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "firstName",
+                "display": {
+                  "label": "First Name",
+                  "placeholder": "Enter first name"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "First name is required."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "text",
+                "fieldName": "lastName",
+                "display": {
+                  "label": "Last Name",
+                  "placeholder": "Enter last name"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Last name is required."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "assignedPerson",
+                "display": {
+                  "label": "Assigned Person"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Assigned person is required."
+                  }
+                },
+
+                "data": {
+                  "api": "api/persons",
+                  "value": null
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "address",
+                "display": {
+                  "label": "Address"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Address is required."
+                  }
+                },
+
+                "data": {
+                  "api": "api/addresses",
+                  "value": null
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "organisation",
+                "display": {
+                  "label": "Organisation"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Organisation is required."
+                  }
+                },
+
+                "data": {
+                  "api": "api/organisationOptions",
+                  "value": null
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "role",
+                "display": {
+                  "label": "Role"
+                },
+                "validation": {
+                  "required": false
+                },
+
+                "data": {
+                  "api": "api/personRoles",
+                  "value": null
+                }
+              },
+              {
+                "type": "textarea",
+                "fieldName": "role1",
+                "display": {
+                  "label": "Role Description",
+                  "placeholder": "Enter role description",
+                  "minRows": 3,
+                  "maxRows": 5
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": ""
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Activities (Last 2 Years)",
+        "isFinalEntity": true,
+        "entities": [
+          {
+            "fieldName": "activities",
+            "entityName": "Activity",
+            "title": "Activities",
+            "isCollection": true,
+            "parentEntity": "Organisation",
+            "collectionProperties": {
+              "collectionTitle": "Activities",
+              "viewType": "table",
+              "itemLayout": {
+                "cardType": "list-item",
+                "actions": ["editButton", "deleteButton"]
+              },
+              "sortOptions": ["activityName", "startDate"],
+              "emptyStateMessage": "No activities found.",
+              "api": "api/activities"
+            },
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "activityName",
+                "display": {
+                  "label": "Activity Name",
+                  "placeholder": "Enter activity name"
+                },
+                "validation": {
+                  "required": true,
+                  "minLength": 2,
+                  "maxLength": 100,
+                  "whitespace": true,
+                  "errorMessages": {
+                    "required": "Activity name is required.",
+                    "minlength": "Activity name must be at least 2 characters.",
+                    "maxlength": "Activity name cannot exceed 100 characters.",
+                    "whitespace": "Activity name cannot be only whitespace."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              },
+              {
+                "type": "select",
+                "fieldName": "type",
+                "display": {
+                  "label": "Activity Type"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Activity type is required."
+                  }
+                },
+                "data": {
+                  "api": "api/activityTypes",
+                  "value": null
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "startDate",
+                "display": {
+                  "label": "Start Date",
+                  "placeholder": "Select start date"
+                },
+                "validation": {
+                  "required": true,
+                  "errorMessages": {
+                    "required": "Start date is required."
+                  }
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "date",
+                "fieldName": "endDate",
+                "display": {
+                  "label": "End Date",
+                  "placeholder": "Select end date"
+                },
+                "validation": {
+                  "required": false
+                },
+                "data": {
+                  "value": null
+                }
+              },
+              {
+                "type": "textarea",
+                "fieldName": "description",
+                "display": {
+                  "label": "Description",
+                  "placeholder": "Enter activity description"
+                },
+                "validation": {
+                  "required": false,
+                  "maxLength": 500,
+                  "errorMessages": {
+                    "maxlength": "Description cannot exceed 500 characters."
+                  }
+                },
+                "data": {
+                  "value": ""
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

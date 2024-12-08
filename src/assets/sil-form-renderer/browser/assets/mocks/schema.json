@@ -1,0 +1,234 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Form Schema",
+    "type": "object",
+    "properties": {
+      "formDefinition": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "apiEndpoint": { "type": "string" },
+          "fileUploadEndpoint": { "type": "string" },
+          "caseDetails": {
+            "type": "object",
+            "properties": {
+              "ocdCaseTypeId": { "type": "string" },
+              "ocdCaseSubTypeId": { "type": "string" },
+              "ocdWorkflowId": { "type": "string" },
+              "ocdAssignerId": { "type": "string" },
+              "ocdAssignedDate": { "type": "string", "format": "date-time" },
+              "ocdAssigneeId": { "type": "string" },
+              "ocdStatusId": { "type": "string" },
+              "ocdActionId": { "type": "string" },
+              "ocdIsEditable": { "type": "boolean" }
+            },
+            "required": [
+              "ocdCaseTypeId",
+              "ocdCaseSubTypeId",
+              "ocdWorkflowId",
+              "ocdAssignerId",
+              "ocdAssignedDate",
+              "ocdAssigneeId",
+              "ocdStatusId",
+              "ocdActionId",
+              "ocdIsEditable"
+            ]
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "integer" },
+                "title": { "type": "string" },
+                "entities": {
+                  "type": "array",
+                  "items": { "$ref": "#/definitions/entity" }
+                }
+              },
+              "required": ["id", "title", "entities"]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "apiEndpoint",
+          "fileUploadEndpoint",
+          "caseDetails",
+          "groups"
+        ]
+      }
+    },
+    "required": ["formDefinition"],
+    "definitions": {
+      "entity": {
+        "type": "object",
+        "properties": {
+          "fieldName": { "type": "string" },
+          "entityName": { "type": "string" },
+          "title": { "type": "string" },
+          "dependencies": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "fields": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/field" }
+          },
+          "isCollection": { "type": "boolean" },
+          "parentEntity": { "type": "string" },
+          "collectionProperties": { "$ref": "#/definitions/collectionProperties" },
+          "isFinalEntity": { "type": "boolean" }
+        },
+        "required": ["fieldName", "entityName", "title", "fields"]
+      },
+      "field": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string" },
+          "fieldName": { "type": "string" },
+          "display": { "$ref": "#/definitions/display" },
+          "validation": { "$ref": "#/definitions/validation" },
+          "conditions": { "$ref": "#/definitions/conditions" },
+          "data": { "$ref": "#/definitions/data" },
+          "behavior": { "$ref": "#/definitions/behavior" }
+        },
+        "required": ["type", "fieldName", "display", "validation", "data"]
+      },
+      "display": {
+        "type": "object",
+        "properties": {
+          "label": { "type": "string" },
+          "placeholder": { "type": "string" },
+          "minRows": { "type": "integer" },
+          "maxRows": { "type": "integer" },
+          "visible": { "type": "boolean" },
+          "min": { "type": "integer" },
+          "max": { "type": "integer" },
+          "step": { "type": "integer" }
+        },
+        "additionalProperties": true
+      },
+      "validation": {
+        "type": "object",
+        "properties": {
+          "required": { "type": "boolean" },
+          "minLength": { "type": "integer" },
+          "maxLength": { "type": "integer" },
+          "whitespace": { "type": "boolean" },
+          "email": { "type": "boolean" },
+          "min": { "type": "integer" },
+          "max": { "type": "integer" },
+          "pattern": { "type": "string" },
+          "errorMessages": { "$ref": "#/definitions/errorMessages" }
+        },
+        "additionalProperties": true
+      },
+      "errorMessages": {
+        "type": "object",
+        "patternProperties": {
+          "^[a-zA-Z]+$": { "type": "string" }
+        },
+        "additionalProperties": false
+      },
+      "conditions": {
+        "type": "object",
+        "properties": {
+          "visibility": { "$ref": "#/definitions/dependency" },
+          "validate": { "$ref": "#/definitions/dependency" },
+          "disable": { "$ref": "#/definitions/dependency" }
+        },
+        "additionalProperties": true
+      },
+      "dependency": {
+        "type": "object",
+        "properties": {
+          "dependsOn": { "type": "string" },
+          "rules": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {},
+                "validation": { "$ref": "#/definitions/validation" }
+              },
+              "required": ["value"]
+            }
+          }
+        },
+        "required": ["dependsOn", "rules"]
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "defaultValue": {},
+          "value": {},
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": { "type": "string" },
+                "value": {}
+              },
+              "required": ["label", "value"]
+            }
+          },
+          "api": { "type": "string" }
+        },
+        "additionalProperties": true
+      },
+      "behavior": {
+        "type": "object",
+        "properties": {
+          "disabled": { "type": "boolean" },
+          "visible": { "type": "boolean" },
+          "autocomplete": { "type": "string" }
+        },
+        "additionalProperties": true
+      },
+      "collectionProperties": {
+        "type": "object",
+        "properties": {
+          "collectionTitle": { "type": "string" },
+          "viewType": { "type": "string" },
+          "itemLayout": { "$ref": "#/definitions/itemLayout" },
+          "sortOptions": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "emptyStateMessage": { "type": "string" },
+          "api": { "type": "string" }
+        },
+        "required": ["collectionTitle", "viewType", "itemLayout", "sortOptions", "emptyStateMessage", "api"]
+      },
+      "itemLayout": {
+        "type": "object",
+        "properties": {
+          "cardType": { "type": "string" },
+          "imageUrl": { "type": "string" },
+          "itemMapper": { "$ref": "#/definitions/itemMapper" },
+          "actions": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["cardType", "actions"],
+        "additionalProperties": true
+      },
+      "itemMapper": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "subTitle": { "type": "string" },
+          "subTitle2": { "type": "string" },
+          "description": { "type": "string" },
+          "id": { "type": "string" },
+          "footer": { "type": "string" }
+        },
+        "required": []
+      }
+    }
+  }

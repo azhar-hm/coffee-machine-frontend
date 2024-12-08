@@ -440,6 +440,14 @@
             "step": 1
           },
           {
+            "type": "date",
+            "fieldName": "testDate",
+            "label": "Test Date",
+            "validators": ["required"],
+            "value": null,
+            "placeholder": "Select test date"
+          },
+          {
             "type": "select",
             "fieldName": "testSelect",
             "label": "Test Select",

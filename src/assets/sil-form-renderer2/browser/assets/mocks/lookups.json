@@ -1,0 +1,52 @@
+{
+  "lookups": {
+    "api/mockSelections": [
+      { "label": "Option A", "value": "optionA" },
+      { "label": "Option B", "value": "optionB" },
+      { "label": "Option C", "value": "optionC" }
+    ],
+    "api/identifierTypes": [
+      {
+        "label": "Business Registration Number",
+        "value": "Business Registration Number"
+      },
+      {
+        "label": "Tax Identification Number (TIN)",
+        "value": "Tax Identification Number"
+      },
+      {
+        "label": "Charity Registration Number",
+        "value": "Charity Registration Number"
+      },
+      { "label": "VAT Number", "value": "VAT Number" },
+      { "label": "D-U-N-S Number", "value": "D-U-N-S Number" },
+      { "label": "LEI Code", "value": "LEI Code" },
+      {
+        "label": "Company Identification Number (CIN)",
+        "value": "Company Identification Number"
+      }
+    ],
+    "api/issuedBy": [
+      { "label": "Government", "value": "government" },
+      { "label": "Private Entity", "value": "privateEntity" }
+    ],
+    "api/organisationOptions": [
+      { "label": "Org 1", "value": "Org 1" },
+      { "label": "Org 2", "value": "Org 2" }
+    ],
+    "api/addressTypes": [
+      { "label": "Home", "value": "home" },
+      { "label": "Work", "value": "work" },
+      { "label": "Other", "value": "other" }
+    ],
+    "api/contactTypes": [
+      { "label": "Phone", "value": "phone" },
+      { "label": "Email", "value": "email" },
+      { "label": "Fax", "value": "fax" }
+    ],
+    "api/personRoles": [
+      { "label": "Manager", "value": "manager" },
+      { "label": "Director", "value": "director" }
+    ]
+  }
+}

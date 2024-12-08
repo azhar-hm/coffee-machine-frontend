@@ -1,0 +1,139 @@
+{
+  "existingData": {
+    "api/identifiers": [
+      {
+        "identifierValue": "ORG123",
+        "identifierType": "Registration Number",
+        "issuedBy": "Government Authority",
+        "expiryDate": "2025-12-31"
+      },
+      {
+        "identifierValue": "ORG456",
+        "identifierType": "Tax ID",
+        "issuedBy": "Tax Authority",
+        "expiryDate": "2025-01-15"
+      }
+    ],
+    "api/activities": [
+      {
+        "id": "1",
+        "activityName": "Annual Team Building Retreat",
+        "type": "Team Building",
+        "startDate": "2024-05-01",
+        "endDate": "2024-05-03",
+        "description": "A retreat to strengthen team dynamics and foster collaboration among team members."
+      },
+      {
+        "id": "2",
+        "activityName": "Quarterly Sales Meeting",
+        "type": "Meeting",
+        "startDate": "2024-06-15",
+        "endDate": "2024-06-15",
+        "description": "A meeting to discuss sales performance, strategies, and goals for the upcoming quarter."
+      },
+      {
+        "id": "3",
+        "activityName": "Monthly Staff Training",
+        "type": "Training",
+        "startDate": "2024-07-10",
+        "endDate": "2024-07-10",
+        "description": "A training session focused on improving skills and knowledge for all staff members."
+      },
+      {
+        "id": "4",
+        "activityName": "Community Volunteer Day",
+        "type": "Volunteer",
+        "startDate": "2024-08-20",
+        "endDate": "2024-08-20",
+        "description": "A day dedicated to volunteering in the community, participating in various service projects."
+      },
+      {
+        "id": "5",
+        "activityName": "Company Picnic",
+        "type": "Social Event",
+        "startDate": "2024-09-25",
+        "endDate": "2024-09-25",
+        "description": "An annual picnic for all employees and their families to enjoy a day of fun and relaxation."
+      }
+    ],
+    "api/secondMockEntities": [
+      {
+        "address1": "123 Main St",
+        "address2": "Apt 4B",
+        "address3": "Building 5",
+        "addressType": "Residential",
+        "postalCode": "12345",
+        "startDate": "2024-10-14",
+        "endDate": "2024-10-20"
+      },
+      {
+        "address1": "456 Elm St",
+        "address2": "",
+        "address3": "Suite 101",
+        "addressType": "Office",
+        "country": "Canada",
+        "postalCode": "A1B 2C3",
+        "startDate": "2024-10-15",
+        "endDate": "2024-10-30"
+      },
+      {
+        "address1": "789 Oak Ave",
+        "address2": "Unit 3",
+        "address3": "",
+        "addressType": "Commercial",
+        "country": "Australia",
+        "postalCode": "3000",
+        "startDate": "2024-10-16",
+        "endDate": "2024-11-05"
+      },
+      {
+        "address1": "101 Pine Rd",
+        "address2": "",
+        "address3": "Floor 2",
+        "addressType": "Permanent",
+        "country": "UK",
+        "postalCode": "SW1A 1AA",
+        "startDate": "2024-10-17",
+        "endDate": "2024-10-25"
+      }
+    ],
+    "api/contactPersons": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "assignedPerson": "Person 1",
+        "address": "123 Main St, Apt 4B, Building 5, Residential, 12345",
+        "organisation": "Organisation A",
+        "role": "Manager",
+        "roleDescription": "Oversees daily operations and staff management."
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "assignedPerson": "Person 2",
+        "address": "456 Elm St, Suite 101, Office, A1B 2C3, Canada",
+        "organisation": "Organisation B",
+        "role": "Team Lead",
+        "roleDescription": "Leads project teams and coordinates with clients."
+      },
+      {
+        "firstName": "Michael",
+        "lastName": "Johnson",
+        "assignedPerson": "Person 3",
+        "address": "789 Oak Ave, Unit 3, Commercial, 3000, Australia",
+        "organisation": "Organisation C",
+        "role": "Consultant",
+        "roleDescription": "Provides expert advice on specialized projects."
+      },
+      {
+        "firstName": "Emily",
+        "lastName": "Williams",
+        "assignedPerson": "Person 4",
+        "address": "101 Pine Rd, Floor 2, Permanent, SW1A 1AA, UK",
+        "organisation": "Organisation D",
+        "role": "HR Specialist",
+        "roleDescription": "Manages recruitment, employee relations, and benefits."
+      }
+    ]
+  }
+}

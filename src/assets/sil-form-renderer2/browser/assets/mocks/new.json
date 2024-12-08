@@ -1,0 +1,463 @@
+{
+  "formDefinition": {
+    "id": "1",
+    "title": "Overall Application for NGO",
+    "sections": [
+      {
+        "id": 1,
+        "title": "Organization Details",
+        "entities": [
+          {
+            "entityName": "Organisation",
+            "title": "Basic Details",
+            "dependencies": [],
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "organisationName",
+                "label": "Organisation Name",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter organisation name"
+              },
+              {
+                "type": "text",
+                "fieldName": "acronym",
+                "label": "Acronym",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter acronym"
+              },
+              {
+                "type": "text",
+                "fieldName": "organisationType",
+                "label": "Organisation Type",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter organisation type"
+              },
+              {
+                "type": "textarea",
+                "fieldName": "mission",
+                "label": "Mission",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter mission statement",
+                "minRows": 3,
+                "maxRows": 5
+              },
+              {
+                "type": "textarea",
+                "fieldName": "objectives",
+                "label": "Objectives",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter objectives",
+                "minRows": 3,
+                "maxRows": 5
+              },
+              {
+                "type": "textarea",
+                "fieldName": "vision",
+                "label": "Vision",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter vision statement",
+                "minRows": 3,
+                "maxRows": 5
+              },
+              {
+                "type": "file",
+                "fieldName": "logo",
+                "label": "Logo",
+                "validators": [],
+                "value": null,
+                "placeholder": "Upload logo"
+              }
+            ]
+          },
+          {
+            "entityName": "Identifier",
+            "title": "Identification",
+            "dependencies": ["Lookup", "Organisation"],
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "identifierValue",
+                "label": "Identifier Value",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter identifier value"
+              },
+              {
+                "type": "date",
+                "fieldName": "issueDate",
+                "label": "Issue Date",
+                "validators": [],
+                "value": null,
+                "placeholder": "Select issue date"
+              },
+              {
+                "type": "date",
+                "fieldName": "expiryDate",
+                "label": "Expiry Date",
+                "validators": [],
+                "value": null,
+                "placeholder": "Select expiry date"
+              },
+              {
+                "type": "select",
+                "fieldName": "identifierType",
+                "label": "Identifier Type",
+                "validators": ["required"],
+                "api": "api/lookup/IDENTIFIER_TYPE",
+                "value": null
+              },
+              {
+                "type": "select",
+                "fieldName": "issuedBy",
+                "label": "Issued By",
+                "validators": [],
+                "api": "api/organisations",
+                "value": null
+              },
+              {
+                "type": "select",
+                "fieldName": "organisation",
+                "label": "Organisation",
+                "validators": [],
+                "api": "api/organisations",
+                "options": [],
+                "value": null
+              },
+              {
+                "type": "select",
+                "fieldName": "person",
+                "label": "Person",
+                "validators": [],
+                "api": "api/persons",
+                "value": null
+              }
+            ]
+          },
+          {
+            "entityName": "Address",
+            "title": "Addresses",
+            "dependencies": ["Lookup"],
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "address1",
+                "label": "Address Line 1",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter address line 1"
+              },
+              {
+                "type": "text",
+                "fieldName": "address2",
+                "label": "Address Line 2",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter address line 2"
+              },
+              {
+                "type": "text",
+                "fieldName": "address3",
+                "label": "Address Line 3",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter address line 3"
+              },
+              {
+                "type": "select",
+                "fieldName": "addressType",
+                "label": "Address Type",
+                "validators": ["required"],
+                "options": [],
+                "value": null
+              },
+              {
+                "type": "select",
+                "fieldName": "country",
+                "label": "Country",
+                "validators": [],
+                "options": [],
+                "value": null
+              },
+              {
+                "type": "text",
+                "fieldName": "postalCode",
+                "label": "Postal Code",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter postal code"
+              },
+              {
+                "type": "date",
+                "fieldName": "startDate",
+                "label": "Start Date",
+                "validators": [],
+                "value": null,
+                "placeholder": "Select start date"
+              },
+              {
+                "type": "date",
+                "fieldName": "endDate",
+                "label": "End Date",
+                "validators": [],
+                "value": null,
+                "placeholder": "Select end date"
+              }
+            ]
+          },
+          {
+            "entityName": "ContactPerson",
+            "title": "Contact Persons",
+            "dependencies": ["Person", "Address", "Organisation", "Lookup"],
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "firstName",
+                "label": "First Name",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter first name"
+              },
+              {
+                "type": "text",
+                "fieldName": "lastName",
+                "label": "Last Name",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter last name"
+              },
+              {
+                "type": "select",
+                "fieldName": "assignedPerson",
+                "label": "Assigned Person",
+                "validators": ["required"],
+                "options": [],
+                "value": null
+              },
+              {
+                "type": "select",
+                "fieldName": "address",
+                "label": "Address",
+                "validators": ["required"],
+                "options": [],
+                "value": null
+              },
+              {
+                "type": "select",
+                "fieldName": "organisation",
+                "label": "Organisation",
+                "validators": ["required"],
+                "options": [],
+                "value": null
+              },
+              {
+                "type": "select",
+                "fieldName": "role",
+                "label": "Role",
+                "validators": [],
+                "options": [],
+                "value": null
+              },
+              {
+                "type": "textarea",
+                "fieldName": "role1",
+                "label": "Role Description",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter role description",
+                "minRows": 3,
+                "maxRows": 5
+              }
+            ]
+          },
+          {
+            "entityName": "Contact",
+            "title": "Contacts",
+            "dependencies": ["Lookup"],
+            "fields": [
+              {
+                "type": "select",
+                "fieldName": "contactType",
+                "label": "Contact Type",
+                "validators": ["required"],
+                "api": "api/lookup/CONTACT_TYPE",
+                "options": [],
+                "value": null
+              },
+              {
+                "type": "text",
+                "fieldName": "contactValue",
+                "label": "Contact Value",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter contact value"
+              },
+              {
+                "type": "checkbox",
+                "fieldName": "isPrimary",
+                "label": "Is Primary",
+                "validators": [],
+                "value": false
+              }
+            ]
+          },
+          {
+            "entityName": "Person",
+            "title": "Persons",
+            "dependencies": [],
+            "fields": [
+              {
+                "type": "text",
+                "fieldName": "firstName",
+                "label": "First Name",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter first name"
+              },
+              {
+                "type": "text",
+                "fieldName": "lastName",
+                "label": "Last Name",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter last name"
+              },
+              {
+                "type": "text",
+                "fieldName": "middleName",
+                "label": "Middle Name",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter middle name"
+              },
+              {
+                "type": "text",
+                "fieldName": "nickname",
+                "label": "Nickname",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter nickname"
+              },
+              {
+                "type": "date",
+                "fieldName": "dateOfBirth",
+                "label": "Date of Birth",
+                "validators": [],
+                "value": null,
+                "placeholder": "Select date of birth"
+              },
+              {
+                "type": "select",
+                "fieldName": "gender",
+                "label": "Gender",
+                "api": "api/lookup/GENDER",
+                "options": [],
+                "value": null
+              },
+              {
+                "type": "text",
+                "fieldName": "email",
+                "label": "Email",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter email"
+              },
+              {
+                "type": "text",
+                "fieldName": "phoneNumber",
+                "label": "Phone Number",
+                "validators": [],
+                "value": "",
+                "placeholder": "Enter phone number"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "entityName": "TestSection",
+            "title": "Test Section",
+            "dependencies": [],
+            "fields": [
+              {
+                "type": "email",
+                "fieldName": "testEmail",
+                "label": "Test Email",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter a valid email address"
+              },
+              {
+                "type": "password",
+                "fieldName": "testPassword",
+                "label": "Test Password",
+                "validators": ["required"],
+                "value": "",
+                "placeholder": "Enter a password"
+              },
+              {
+                "type": "number",
+                "fieldName": "testNumber",
+                "label": "Test Number",
+                "validators": ["required"],
+                "value": null,
+                "placeholder": "Enter a number"
+              },
+              {
+                "type": "radio",
+                "fieldName": "testRadio",
+                "label": "Test Radio",
+                "validators": ["required"],
+                "options": [
+                  { "label": "Option 1", "value": "option1" },
+                  { "label": "Option 2", "value": "option2" }
+                ],
+                "value": null
+              },
+              {
+                "type": "file",
+                "fieldName": "testFile",
+                "label": "Test File",
+                "validators": ["required"],
+                "value": null,
+                "placeholder": "Upload a file"
+              },
+              {
+                "type": "slider",
+                "fieldName": "testSlider",
+                "label": "Test Slider",
+                "validators": ["required"],
+                "value": 50,
+                "min": 0,
+                "max": 100,
+                "step": 1
+              },
+              {
+                "type": "date",
+                "fieldName": "testDate",
+                "label": "Test Date",
+                "validators": ["required"],
+                "value": null,
+                "placeholder": "Select test date"
+              },
+              {
+                "type": "select",
+                "fieldName": "testSelect",
+                "label": "Test Select",
+                "validators": ["required"],
+                "api": "api/testSelections",
+                "value": null,
+                "placeholder": "Select an option"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

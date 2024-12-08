@@ -1,0 +1,113 @@
+{
+    "ocdCaseTypeId": "REGISTRATION",
+    "ocdCaseSubTypeId": "REGISTRATION_OF_NGO",
+    "ocdWorkflowId": "WORKFLOW_4984513156789455123",
+    "ocdAssignerId": "usr_5224442c22335w651",
+    "ocdAssignedDate": "2024-10-07T00:00:00",
+    "ocdAssigneeId": "usr_5224442c223354651",
+    "ocdStatusId": "STATUS_4984513156789455123",
+    "ocdActionId": "ACTION_4984513156789455123",
+    "ocdIsEditable": false,
+    "organisation": {
+      "organisationName": "Example Organisation",
+      "acronym": "EO",
+      "organisationType": "Non-Profit",
+      "mission": "To serve the community through various initiatives and programs.",
+      "objectives": "Community service, development, and empowerment.",
+      "vision": "A better world for everyone, where communities thrive.",
+      "logo": "base64encodedstring",
+      "identifiers": [
+        {
+          "identifierValue": "123456",
+          "issueDate": "2023-01-01",
+          "expiryDate": "2025-01-01",
+          "identifierType": "Tax ID",
+          "issuedBy": "Government",
+          "organisation": "Example Organisation"
+        },
+        {
+          "identifierValue": "789012",
+          "issueDate": "2023-06-01",
+          "expiryDate": "2026-06-01",
+          "identifierType": "Registration Number",
+          "issuedBy": "Local Authority",
+          "organisation": "Example Organisation"
+        }
+      ],
+      "addresses": [
+        {
+          "address1": "123 Main St",
+          "address2": "Suite 100",
+          "address3": "Building A",
+          "addressType": "Headquarters",
+          "country": "CountryName",
+          "postalCode": "12345",
+          "startDate": "2023-01-01",
+          "endDate": "2025-01-01"
+        },
+        {
+          "address1": "456 Secondary Rd",
+          "address2": "Floor 2",
+          "address3": "Wing B",
+          "addressType": "Branch Office",
+          "country": "CountryName",
+          "postalCode": "67890",
+          "startDate": "2023-02-01",
+          "endDate": "2025-02-01"
+        }
+      ],
+      "contact": {
+        "contactType": "email",
+        "contactValue": "contact@example.org",
+        "isPrimary": true
+      },
+      "person": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "middleName": "A",
+        "nickname": "Johnny",
+        "gender": "Male",
+        "dateOfBirth": "1990-01-01",
+        "photo": "base64encodedstring",
+        "biodata": "John has been with the organisation for over 10 years, contributing significantly to its growth.",
+        "agreeTerms": true,
+        "contactPerson": [
+          {
+            "firstName": "Jane",
+            "lastName": "Doe",
+            "assignedPerson": "John Doe",
+            "address": "123 Main St",
+            "organisation": "Example Organisation",
+            "role": "Manager",
+            "role1": "Manages the team and oversees project execution."
+          },
+          {
+            "firstName": "Alice",
+            "lastName": "Smith",
+            "assignedPerson": "John Doe",
+            "address": "456 Secondary Rd",
+            "organisation": "Example Organisation",
+            "role": "Coordinator",
+            "role1": "Coordinates between different departments to ensure smooth operations."
+          }
+        ]
+      },
+      "activities": [
+        {
+          "activityName": "Community Outreach",
+          "type": "Outreach",
+          "startDate": "2022-01-01",
+          "endDate": "2022-12-31",
+          "description": "Engaging with the community through workshops and seminars."
+        },
+        {
+          "activityName": "Fundraising Gala",
+          "type": "Fundraising",
+          "startDate": "2022-05-01",
+          "endDate": "2022-05-02",
+          "description": "Annual fundraising event to support community projects."
+        }
+      ]
+    }
+  }
+   

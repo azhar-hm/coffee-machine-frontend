@@ -1,0 +1,11 @@
+{
+    "api/help/documentation/1": {
+      "title": "API 1 Documentation",
+      "content": "This is the documentation for API 1."
+    },
+    "api/help/documentation/2": {
+      "title": "API 2 Documentation",
+      "content": "This is the documentation for API 2."
+    }
+  }
+  

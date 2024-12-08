@@ -1,0 +1,347 @@
+{
+  "lookups": {
+    "api/mockSelections": [
+      {
+        "label": "Option A",
+        "value": "optionA"
+      },
+      {
+        "label": "Option B",
+        "value": "optionB"
+      },
+      {
+        "label": "Option C",
+        "value": "optionC"
+      }
+    ],
+    "api/identifierTypes": [
+      {
+        "label": "Business Registration Number",
+        "value": "Business Registration Number"
+      },
+      {
+        "label": "Tax Identification Number (TIN)",
+        "value": "Tax Identification Number"
+      },
+      {
+        "label": "Charity Registration Number",
+        "value": "Charity Registration Number"
+      },
+      {
+        "label": "VAT Number",
+        "value": "VAT Number"
+      },
+      {
+        "label": "D-U-N-S Number",
+        "value": "D-U-N-S Number"
+      },
+      {
+        "label": "LEI Code",
+        "value": "LEI Code"
+      },
+      {
+        "label": "Company Identification Number (CIN)",
+        "value": "Company Identification Number"
+      }
+    ],
+    "api/persons": [
+      {
+        "label": "John Doe",
+        "value": "person001"
+      },
+      {
+        "label": "Jane Smith",
+        "value": "person002"
+      },
+      {
+        "label": "Robert Brown",
+        "value": "person003"
+      },
+      {
+        "label": "Emily Davis",
+        "value": "person004"
+      },
+      {
+        "label": "Michael Wilson",
+        "value": "person005"
+      },
+      {
+        "label": "Sophia Johnson",
+        "value": "person006"
+      },
+      {
+        "label": "James Lee",
+        "value": "person007"
+      },
+      {
+        "label": "Olivia Martin",
+        "value": "person008"
+      },
+      {
+        "label": "William Garcia",
+        "value": "person009"
+      },
+      {
+        "label": "Mia Rodriguez",
+        "value": "person010"
+      }
+    ],
+    "api/issuedBy": [
+      {
+        "label": "Government",
+        "value": "government"
+      },
+      {
+        "label": "Private Entity",
+        "value": "privateEntity"
+      }
+    ],
+    "api/organisationOptions": [
+      {
+        "label": "Org 1",
+        "value": "Org 1"
+      },
+      {
+        "label": "Org 2",
+        "value": "Org 2"
+      }
+    ],
+    "api/addresses": [
+      {
+        "label": "123 Main St, Springfield",
+        "value": "address001"
+      },
+      {
+        "label": "456 Elm St, Metropolis",
+        "value": "address002"
+      },
+      {
+        "label": "789 Oak St, Gotham",
+        "value": "address003"
+      },
+      {
+        "label": "101 Maple St, Star City",
+        "value": "address004"
+      },
+      {
+        "label": "202 Pine St, Central City",
+        "value": "address005"
+      },
+      {
+        "label": "303 Birch St, Coast City",
+        "value": "address006"
+      },
+      {
+        "label": "404 Cedar St, Smallville",
+        "value": "address007"
+      },
+      {
+        "label": "505 Walnut St, Riverdale",
+        "value": "address008"
+      },
+      {
+        "label": "606 Spruce St, National City",
+        "value": "address009"
+      },
+      {
+        "label": "707 Cherry St, Happy Harbor",
+        "value": "address010"
+      }
+    ],
+    "api/addressTypes": [
+      {
+        "label": "Headquarters",
+        "value": "headquarters"
+      },
+      {
+        "label": "Branch",
+        "value": "branch"
+      },
+      {
+        "label": "Warehouse",
+        "value": "warehouse"
+      },
+      {
+        "label": "Office",
+        "value": "office"
+      },
+      {
+        "label": "Other",
+        "value": "other"
+      }
+    ],
+    "api/contactTypes": [
+      {
+        "label": "Phone",
+        "value": "phone"
+      },
+      {
+        "label": "Email",
+        "value": "email"
+      },
+      {
+        "label": "Fax",
+        "value": "fax"
+      }
+    ],
+
+    "api/genders": [
+      {
+        "label": "Male",
+        "value": "male"
+      },
+      {
+        "label": "Female",
+        "value": "female"
+      }
+    ],
+    "api/personRoles": [
+      {
+        "label": "Manager",
+        "value": "manager"
+      },
+      {
+        "label": "Director",
+        "value": "director"
+      }
+    ],
+    "api/countries": [
+      {
+        "label": "United States",
+        "value": "US"
+      },
+      {
+        "label": "China",
+        "value": "CN"
+      },
+      {
+        "label": "Russia",
+        "value": "RU"
+      },
+      {
+        "label": "United Kingdom",
+        "value": "GB"
+      },
+      {
+        "label": "France",
+        "value": "FR"
+      },
+      {
+        "label": "Germany",
+        "value": "DE"
+      },
+      {
+        "label": "Japan",
+        "value": "JP"
+      },
+      {
+        "label": "India",
+        "value": "IN"
+      },
+      {
+        "label": "Kenya",
+        "value": "KE"
+      },
+      {
+        "label": "Tanzania",
+        "value": "TZ"
+      },
+      {
+        "label": "Uganda",
+        "value": "UG"
+      },
+      {
+        "label": "Ethiopia",
+        "value": "ET"
+      },
+      {
+        "label": "Rwanda",
+        "value": "RW"
+      },
+      {
+        "label": "Somalia",
+        "value": "SO"
+      },
+      {
+        "label": "Sudan",
+        "value": "SD"
+      },
+      {
+        "label": "South Africa",
+        "value": "ZA"
+      },
+      {
+        "label": "Namibia",
+        "value": "NA"
+      },
+      {
+        "label": "Botswana",
+        "value": "BW"
+      },
+      {
+        "label": "Lesotho",
+        "value": "LS"
+      },
+      {
+        "label": "Swaziland (Eswatini)",
+        "value": "SZ"
+      },
+      {
+        "label": "Zimbabwe",
+        "value": "ZW"
+      },
+      {
+        "label": "Angola",
+        "value": "AO"
+      },
+      {
+        "label": "Mozambique",
+        "value": "MZ"
+      },
+      {
+        "label": "Zambia",
+        "value": "ZM"
+      },
+      {
+        "label": "Malawi",
+        "value": "MW"
+      },
+      {
+        "label": "Madagascar",
+        "value": "MG"
+      },
+      {
+        "label": "Mauritius",
+        "value": "MU"
+      },
+      {
+        "label": "Seychelles",
+        "value": "SC"
+      },
+      {
+        "label": "Maldives",
+        "value": "MV"
+      },
+      {
+        "label": "Bangladesh",
+        "value": "BD"
+      },
+      {
+        "label": "Pakistan",
+        "value": "PK"
+      },
+      {
+        "label": "Sri Lanka",
+        "value": "LK"
+      },
+      {
+        "label": "Nepal",
+        "value": "NP"
+      },
+      {
+        "label": "Bhutan",
+        "value": "BT"
+      }
+    ]
+  }
+}

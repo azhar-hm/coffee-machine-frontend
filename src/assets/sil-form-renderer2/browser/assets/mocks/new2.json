@@ -1,0 +1,323 @@
+{
+  "entityType": "mu.sil.entities.CaseDetails",
+  "entity": {
+    "ocdCaseId": "caseId_065441",
+    "ocdCaseType": "Registration",
+    "ocdCaseTypeId": "REGISTRATION",
+    "ocdCaseSubType": "Registration Of NGO",
+    "ocdCaseSubTypeId": "REGISTRATION_OF_NGO",
+    "ocdFormId": "FORM001",
+    "ocdWorkflowId": "WORKFLOW_4984513156789455123",
+    "ocdAssignerId": "usr_5224442c22335w651",
+    "ocdAssignerName": "John Doe",
+    "ocdAssignerRoleId": "ROLE_4984513156789s55123",
+    "ocdAssignedDate": "2024-10-07T00:00:00",
+    "ocdAssigneeId": "usr_5224442c223354651",
+    "ocdAssigneeName": "Jane Doe",
+    "ocdAssigneeRoleId": "ROLE_4984513156789s55123",
+    "ocdApplicantEmailId": "jane.doe@example.com",
+    "ocdApplicantName": "Jane Doe",
+    "ocdApplicantPhoneNumber": "1234567890",
+    "ocdStatus": "Save",
+    "ocdStatusId": "STATUS_4984513156789455123",
+    "ocdAction": "Submit",
+    "ocdActionId": "ACTION_4984513156789455123",
+    "ocdIsEditable": true,
+    "ocdComments": ["Comment"],
+    "ocdCreatedBy": "usr_5224442c223354651",
+    "ocdCreatedDate": "2024-10-07T00:00:00",
+    "ocdUpdatedBy": "usr_52244478223354651",
+    "ocdUpdatedDate": "2024-10-07T00:00:00"
+  },
+  "properties": {
+    "elementType": "form",
+    "formName": "Case Details",
+    "version": "1.0",
+    "fieldsets": []
+  },
+  "dataValidation": {
+    "dataValidation": {
+      "ocdCaseId": {
+        "required": true,
+        "value": "^[a-zA-Z0-9-]+$"
+      },
+      "ocdCaseType": {
+        "required": true
+      },
+      "ocdCaseTypeId": {
+        "required": true
+      },
+      "ocdCaseSubType": {
+        "required": true
+      },
+      "ocdCaseSubTypeId": {
+        "required": true
+      },
+      "ocdFormId": {
+        "required": true
+      },
+      "ocdWorkflowId": {
+        "required": true
+      },
+      "ocdAssignerId": {
+        "required": true
+      },
+      "ocdAssignerName": {
+        "required": true
+      },
+      "ocdAssignerRoleId": {
+        "required": true
+      },
+      "ocdAssignedDate": {
+        "required": true
+      },
+      "ocdAssigneeId": {
+        "required": true
+      },
+      "ocdAssigneeName": {
+        "required": true
+      },
+      "ocdAssigneeRoleId": {
+        "required": true
+      },
+      "ocdApplicantEmailId": {
+        "required": true,
+        "value": "^[\\w-\\.]+@[\\w-]+\\.[a-zA-Z]{2,}$"
+      },
+      "ocdApplicantName": {
+        "required": true
+      },
+      "ocdApplicantPhoneNumber": {
+        "required": true,
+        "value": "^[+]?[0-9]{1,14}$"
+      },
+      "ocdStatus": {
+        "required": true
+      },
+      "ocdStatusId": {
+        "required": true
+      },
+      "ocdAction": {
+        "required": true
+      },
+      "ocdActionId": {
+        "required": true
+      },
+      "ocdIsEditable": {
+        "required": true
+      },
+      "ocdComments": {
+        "required": false
+      },
+      "ocdCreatedBy": {
+        "required": true
+      },
+      "ocdCreatedDate": {
+        "required": true
+      },
+      "ocdUpdatedBy": {
+        "required": false
+      },
+      "ocdUpdatedDate": {
+        "required": false
+      }
+    }
+  },
+  "children": [
+    {
+      "entityType": "mu.sil.entities.SILFormSection",
+      "entity": {},
+      "dataValidation": {},
+      "properties": {
+        "version": "1.0",
+        "formName": "Organisation Details",
+        "fieldsets": [],
+        "elementType": "group"
+      },
+      "children": [
+        {
+          "entityType": "mu.sil.entities.SILOrganisation",
+          "entity": {
+            "soId": "ORG001",
+            "soName": "TechCorp",
+            "soAcronym": "TC",
+            "soOrganisationType": "Enterprise",
+            "soLogo": "techcorp_logo.png",
+            "soMission": "Innovating technology solutions for a better future.",
+            "soVision": "To be the global leader in tech innovation.",
+            "soObjectives": "Expand globally, focus on AI and machine learning solutions.",
+            "soCreatedBy": "usr_5224442c223354651",
+            "soUpdatedBy": "usr_5224442c223354651",
+            "soCreatingDate": "2024-10-07T12:00:00",
+            "soUpdatingDate": "2024-10-07T12:00:00"
+          },
+          "properties": {
+            "formName": "Organisation",
+            "elementType": "section",
+            "version": "1.0",
+            "fieldsets": [
+              {
+                "title": "Basic Information",
+                "description": "Provide basic details of the organization",
+                "fields": [
+                  {
+                    "name": "soName",
+                    "type": "text",
+                    "label": {
+                      "default": "Organization Name",
+                      "i18n": {
+                        "en": "Organization Name",
+                        "fr": "Nom de l'organisation"
+                      }
+                    },
+                    "required": true,
+                    "description": "Enter the official name of the organization",
+                    "conditions": {
+                      "validation": "^[a-zA-Z\\s]+$"
+                    },
+                    "validations": {
+                      "customValidator": "validateName",
+                      "errorMessage": {
+                        "default": "Please provide a valid organization name",
+                        "i18n": {
+                          "en": "Please provide a valid organization name",
+                          "fr": "Veuillez fournir un nom d'organisation valide"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "name": "soAcronym",
+                    "type": "text",
+                    "label": {
+                      "default": "Acronym",
+                      "i18n": {
+                        "en": "Acronym",
+                        "fr": "Acronyme"
+                      }
+                    },
+                    "required": false,
+                    "description": "Enter the organization's acronym",
+                    "conditions": {
+                      "validation": "^[a-zA-Z]{2,10}$"
+                    },
+                    "validations": {
+                      "customValidator": "validateAcronym",
+                      "errorMessage": {
+                        "default": "Please provide a valid acronym",
+                        "i18n": {
+                          "en": "Please provide a valid acronym",
+                          "fr": "Veuillez fournir un acronyme valide"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "name": "soOrganisationType",
+                    "type": "select",
+                    "label": {
+                      "default": "Organization Type",
+                      "i18n": {
+                        "en": "Organization Type",
+                        "fr": "Type d'organisation"
+                      }
+                    },
+                    "required": true,
+                    "description": "Select the organization's type",
+                    "options": [
+                      "Enterprise",
+                      "Governmental",
+                      "Non-Profit",
+                      "Educational",
+                      "Research",
+                      "Other"
+                    ],
+                    "api": {
+                      "url": "https://localhost:8080/api/reference/fetch-reference-parameter-data-for-forms",
+                      "method": "GET",
+                      "params": {
+                        "referenceKey": "ORGANISATION_TYPE"
+                      }
+                    },
+                    "validations": {
+                      "customValidator": "validateOrganisationType",
+                      "errorMessage": {
+                        "default": "Please select a valid organization type",
+                        "i18n": {
+                          "en": "Please select a valid organization type",
+                          "fr": "Veuillez sélectionner un type d'organisation valide"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "name": "soMission",
+                    "type": "textarea",
+                    "label": {
+                      "default": "Mission",
+                      "i18n": {
+                        "en": "Mission",
+                        "fr": "Mission"
+                      }
+                    },
+                    "required": false,
+                    "description": "State the organization's mission"
+                  },
+                  {
+                    "name": "soVision",
+                    "type": "textarea",
+                    "label": {
+                      "default": "Vision",
+                      "i18n": {
+                        "en": "Vision",
+                        "fr": "Vision"
+                      }
+                    },
+                    "required": false,
+                    "description": "State the organization's vision"
+                  },
+                  {
+                    "name": "soObjectives",
+                    "type": "textarea",
+                    "label": {
+                      "default": "Objectives",
+                      "i18n": {
+                        "en": "Objectives",
+                        "fr": "Objectifs"
+                      }
+                    },
+                    "required": false,
+                    "description": "List the organization's objectives"
+                  }
+                ]
+              }
+            ]
+          },
+          "dataValidation": {
+            "soName": {
+              "required": true,
+              "value": "^[a-zA-Z\\s]+$"
+            },
+            "soAcronym": {
+              "required": true,
+              "value": "^[a-zA-Z]{2,10}$"
+            },
+            "soOrganisationType": {
+              "required": true
+            },
+            "soMission": {
+              "required": false
+            },
+            "soVision": {
+              "required": false
+            },
+            "soObjectives": {
+              "required": false
+            }
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}
